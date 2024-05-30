@@ -1627,7 +1627,7 @@ void DrawLink(ImNodesEditorContext& editor, const int link_idx)
         cubic_bezier.P3,
         link_color,
         GImNodes->Style.LinkThickness,
-        cubic_bezier.NumSegments);
+        2);
 }
 
 void BeginPinAttribute(
@@ -1858,7 +1858,7 @@ static void MiniMapDrawLink(ImNodesEditorContext& editor, const int link_idx)
         cubic_bezier.P3,
         link_color,
         GImNodes->Style.LinkThickness * editor.MiniMapScaling,
-        cubic_bezier.NumSegments);
+        1);
 }
 
 static void MiniMapUpdate()
