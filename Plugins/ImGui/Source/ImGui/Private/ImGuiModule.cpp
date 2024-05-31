@@ -9,10 +9,10 @@
 
 #if WITH_EDITOR
 #include "ImGuiImplementation.h"
-#include <imnodes.h>
 #include "Editor/ImGuiEditor.h"
 #endif
 
+#include <imnodes.h>
 #include <Interfaces/IPluginManager.h>
 
 
@@ -124,11 +124,11 @@ void FImGuiModule::StartupModule()
 #if WITH_EDITOR
 	ImGuiContextHandle = &ImGuiImplementation::GetContextHandle();
 	DelegatesContainerHandle = &FImGuiDelegatesContainer::GetHandle();
-	ImNodes::CreateContext();
+	
 #endif
 
 	// Create managers that implements module logic.
-
+	ImNodes::CreateContext();
 	checkf(!ImGuiModuleManager, TEXT("Instance of the ImGui Module Manager already exists. Instance should be created only during module startup."));
 	ImGuiModuleManager = new FImGuiModuleManager();
 

@@ -25,6 +25,7 @@ struct FImGUILink
 	UPROPERTY()
 	int32 EndNodeAttributeID = -1;
 
+
 	FImGUILink() {}
 
 	FImGUILink(const int32 InStartNodeID, const int32 InStartNodeAttributeID, const int32 InEndNodeID, const int32 InEndNodeAttributeID)
@@ -91,6 +92,8 @@ protected:
 
 	UPROPERTY(EditAnywhere)
 	FColor NodesColor = FColor(30, 30, 30, 255);
+
+	
 
 private:
 

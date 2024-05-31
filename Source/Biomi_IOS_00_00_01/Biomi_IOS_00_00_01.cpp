@@ -4,5 +4,3 @@
 #include "Modules/ModuleManager.h"
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, Biomi_IOS_00_00_01, "Biomi_IOS_00_00_01" );
-
-DEFINE_LOG_CATEGORY(GeneralImGUILog);

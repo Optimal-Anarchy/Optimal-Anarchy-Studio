@@ -78,6 +78,7 @@ void AImGUIHUD::BeginPlay()
 	FImGuiModule::Get().GetProperties().SetInputEnabled(true);
 	FImGuiModule::Get().GetProperties().SetMouseInputShared(true);
 
+	
 	// NODE COLOR STYLE
 	ImNodes::PushColorStyle(ImNodesCol_TitleBar, IM_COL32(NodesColor.R, NodesColor.G, NodesColor.B, NodesColor.A));
 	ImNodes::PushColorStyle(ImNodesCol_TitleBarHovered, IM_COL32(NodesColor.R, NodesColor.G, NodesColor.B, NodesColor.A));
@@ -85,6 +86,7 @@ void AImGUIHUD::BeginPlay()
 	ImNodes::PushColorStyle(ImNodesCol_NodeBackground, IM_COL32(NodesColor.R, NodesColor.G, NodesColor.B, NodesColor.A));
 	ImNodes::PushColorStyle(ImNodesCol_NodeBackgroundHovered, IM_COL32(NodesColor.R, NodesColor.G, NodesColor.B, NodesColor.A));
 	ImNodes::PushColorStyle(ImNodesCol_NodeBackgroundSelected, IM_COL32(NodesColor.R, NodesColor.G, NodesColor.B, NodesColor.A));
+	
 }
 
 void AImGUIHUD::Tick(float DeltaTime)
@@ -96,6 +98,9 @@ void AImGUIHUD::Tick(float DeltaTime)
 	GetOwningPlayerController()->GetViewportSize(ViewportSizeX, ViewportSizeY);
 	ImGui::SetNextWindowSize(ImVec2(ViewportSizeX / 1.5f, ViewportSizeY / 1.5f), ImGuiCond_FirstUseEver);
 	ImGui::SetNextWindowPos(ImVec2(ViewportSizeX / 6.f, ViewportSizeY / 6.f), ImGuiCond_FirstUseEver);
+
+	
+
 	ImGui::Begin("Node Graph Editor",NULL,ImGuiWindowFlags_NoBackground);
 
 	ImNodes::BeginNodeEditor();
